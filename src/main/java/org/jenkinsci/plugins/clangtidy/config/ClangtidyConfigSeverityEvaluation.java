@@ -40,6 +40,8 @@ public class ClangtidyConfigSeverityEvaluation implements Serializable {
 
 	private boolean warningClangDiagnostic = true;
 
+	private boolean warningEsri = true;
+
 	private boolean warningGoogle = true;
 
 	private boolean warningLlvm = true;
@@ -60,9 +62,9 @@ public class ClangtidyConfigSeverityEvaluation implements Serializable {
 	public ClangtidyConfigSeverityEvaluation(String threshold, String newThreshold, String failureThreshold,
 			String newFailureThreshold, String healthy, String unHealthy, boolean severityError,
 			boolean severityWarning, boolean warningBoost, boolean warningCert, boolean warningCppcoreguidelines,
-			boolean warningClangAnalyzer, boolean warningClangDiagnostic, boolean warningGoogle, boolean warningLlvm,
-			boolean warningMisc, boolean warningModernize, boolean warningMpi, boolean warningPerformance,
-			boolean warningReadability) {
+			boolean warningClangAnalyzer, boolean warningClangDiagnostic, boolean warningEsri, boolean warningGoogle,
+			boolean warningLlvm, boolean warningMisc, boolean warningModernize, boolean warningMpi,
+			boolean warningPerformance, boolean warningReadability) {
 		this.threshold = threshold;
 		this.newThreshold = newThreshold;
 		this.failureThreshold = failureThreshold;
@@ -76,6 +78,7 @@ public class ClangtidyConfigSeverityEvaluation implements Serializable {
 		this.warningCppcoreguidelines = warningCppcoreguidelines;
 		this.warningClangAnalyzer = warningClangAnalyzer;
 		this.warningClangDiagnostic = warningClangDiagnostic;
+		this.warningEsri = warningEsri;
 		this.warningGoogle = warningGoogle;
 		this.warningLlvm = warningLlvm;
 		this.warningMisc = warningMisc;
@@ -135,6 +138,10 @@ public class ClangtidyConfigSeverityEvaluation implements Serializable {
 
 	public boolean isWarningCppcoreguidelines() {
 		return warningCppcoreguidelines;
+	}
+
+	public boolean isWarningEsri() {
+		return warningEsri;
 	}
 
 	public boolean isWarningGoogle() {

@@ -141,6 +141,14 @@
                     <st:nbsp/>
                 </td>
                 <td>
+                    <f:checkbox name="${id}.config.configSeverityEvaluation.warningEsri"
+                                checked="${config.configSeverityEvaluation.warningEsri}"
+                                id="thresholdLimit.warningEsri"/>
+                    <st:nbsp/>
+                    <label for="thresholdLimit.warningEsri">${%Esri}</label>
+                    <st:nbsp/>
+                </td>
+                <td>
                     <f:checkbox name="${id}.config.configSeverityEvaluation.warningGoogle"
                                 checked="${config.configSeverityEvaluation.warningGoogle}"
                                 id="thresholdLimit.warningGoogle"/>
@@ -295,6 +303,14 @@
                                 id="configGraph.displayClangDiagnosticWarning"/>
                     <st:nbsp/>
                     <label for="configGraph.displayClangDiagnosticWarning">${%Display Clang-Diagnostic}</label>
+                    <st:nbsp/>
+                </td>
+                <td>
+                    <f:checkbox name="${id}.config.configGraph.displayEsriWarning"
+                                checked="${config.configGraph.displayEsriWarning}"
+                                id="configGraph.displayEsriWarning"/>
+                    <st:nbsp/>
+                    <label for="configGraph.displayEsriWarning">${%Display Esri}</label>
                     <st:nbsp/>
                 </td>
                 <td>

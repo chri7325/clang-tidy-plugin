@@ -82,14 +82,14 @@ public class ClangtidyPublisher extends Recorder {
 			boolean stableBuild, String newThreshold, String failureThreshold, String newFailureThreshold,
 			String healthy, String unHealthy, boolean severityError, boolean severityWarning, boolean warningBoost,
 			boolean warningCert, boolean warningCppcoreguidelines, boolean warningClangAnalyzer,
-			boolean warningClangDiagnostic, boolean warningGoogle, boolean warningLlvm, boolean warningMisc,
-			boolean warningModernize, boolean warningMpi, boolean warningPerformance, boolean warningReadability,
-			int xSize, int ySize, int numBuildsInGraph, boolean displayAllErrors, boolean displayErrorSeverity,
-			boolean displayWarningSeverity, boolean displayBoostWarning, boolean displayCertWarning,
-			boolean displayCppcoreguidelinesWarning, boolean displayClangAnalyzerWarning,
-			boolean displayClangDiagnosticWarning, boolean displayGoogleWarning, boolean displayLlvmWarning,
-			boolean displayMiscWarning, boolean displayModernizeWarning, boolean displayMpiWarning,
-			boolean displayPerformanceWarning, boolean displayReadabilityWarning) {
+			boolean warningClangDiagnostic, boolean warningEsri, boolean warningGoogle, boolean warningLlvm,
+			boolean warningMisc, boolean warningModernize, boolean warningMpi, boolean warningPerformance,
+			boolean warningReadability, int xSize, int ySize, int numBuildsInGraph, boolean displayAllErrors,
+			boolean displayErrorSeverity, boolean displayWarningSeverity, boolean displayBoostWarning,
+			boolean displayCertWarning, boolean displayCppcoreguidelinesWarning, boolean displayClangAnalyzerWarning,
+			boolean displayClangDiagnosticWarning, boolean displayEsriWarning, boolean displayGoogleWarning,
+			boolean displayLlvmWarning, boolean displayMiscWarning, boolean displayModernizeWarning,
+			boolean displayMpiWarning, boolean displayPerformanceWarning, boolean displayReadabilityWarning) {
 
 		clangtidyConfig = new ClangtidyConfig();
 
@@ -100,13 +100,13 @@ public class ClangtidyPublisher extends Recorder {
 		ClangtidyConfigSeverityEvaluation configSeverityEvaluation = new ClangtidyConfigSeverityEvaluation(threshold,
 				newThreshold, failureThreshold, newFailureThreshold, healthy, unHealthy, severityError, severityWarning,
 				warningBoost, warningCert, warningCppcoreguidelines, warningClangAnalyzer, warningClangDiagnostic,
-				warningGoogle, warningLlvm, warningMisc, warningModernize, warningMpi, warningPerformance,
+				warningEsri, warningGoogle, warningLlvm, warningMisc, warningModernize, warningMpi, warningPerformance,
 				warningReadability);
 		clangtidyConfig.setConfigSeverityEvaluation(configSeverityEvaluation);
 		ClangtidyConfigGraph configGraph = new ClangtidyConfigGraph(xSize, ySize, numBuildsInGraph, displayAllErrors,
 				displayErrorSeverity, displayWarningSeverity, displayBoostWarning, displayCertWarning,
 				displayCppcoreguidelinesWarning, displayClangAnalyzerWarning, displayClangDiagnosticWarning,
-				displayGoogleWarning, displayLlvmWarning, displayMiscWarning, displayModernizeWarning,
+				displayEsriWarning, displayGoogleWarning, displayLlvmWarning, displayMiscWarning, displayModernizeWarning,
 				displayMpiWarning, displayPerformanceWarning, displayReadabilityWarning);
 		clangtidyConfig.setConfigGraph(configGraph);
 	}

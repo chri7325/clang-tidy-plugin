@@ -18,6 +18,7 @@
         <j:set var="numberCppcoreguidelinesWarning" value="${0}"/>
         <j:set var="numberClangAnalyzerWarning" value="${0}"/>
         <j:set var="numberClangDiagnosticWarning" value="${0}"/>
+        <j:set var="numberEsriWarning" value="${0}"/>
         <j:set var="numberGoogleWarning" value="${0}"/>
         <j:set var="numberLlvmWarning" value="${0}"/>
         <j:set var="numberMiscWarning" value="${0}"/>
@@ -38,6 +39,7 @@
                 <td class="pane-header">${%Cppcoreguidelines}</td>
                 <td class="pane-header">${%Clang-Analyzer}</td>
                 <td class="pane-header">${%Clang-Diagnostic}</td>
+                <td class="pane-header">${%Esri}</td>
                 <td class="pane-header">${%Google}</td>
                 <td class="pane-header">${%LLVM}</td>
                 <td class="pane-header">${%Misc}</td>
@@ -61,6 +63,7 @@
                     <td class="pane number">${stats.numberCppcoreguidelinesWarning}</td>
                     <td class="pane number">${stats.numberClangAnalyzerWarning}</td>
                     <td class="pane number">${stats.numberClangDiagnosticWarning}</td>
+                    <td class="pane number">${stats.numberEsriWarning}</td>
                     <td class="pane number">${stats.numberGoogleWarning}</td>
                     <td class="pane number">${stats.numberLlvmWarning}</td>
                     <td class="pane number">${stats.numberMiscWarning}</td>
@@ -77,6 +80,7 @@
                     <j:set var="numberCppcoreguidelinesWarning" value="${numberCppcoreguidelinesWarning + stats.numberCppcoreguidelinesWarning}"/>
                     <j:set var="numberClangAnalyzerWarning" value="${numberClangAnalyzerWarning + stats.numberClangAnalyzerWarning}"/>
                     <j:set var="numberClangDiagnosticWarning" value="${numberClangDiagnosticWarning + stats.numberClangDiagnosticWarning}"/>
+                    <j:set var="numberEsriWarning" value="${numberEsriWarning + stats.numberEsriWarning}"/>
                     <j:set var="numberGoogleWarning" value="${numberGoogleWarning + stats.numberGoogleWarning}"/>
                     <j:set var="numberLlvmWarning" value="${numberLlvmWarning + stats.numberLlvmWarning}"/>
                     <j:set var="numberMiscWarning" value="${numberMiscWarning + stats.numberMiscWarning}"/>
@@ -98,6 +102,7 @@
                 <td class="pane-header number">${numberCppcoreguidelinesWarning}</td>
                 <td class="pane-header number">${numberClangAnalyzerWarning}</td>
                 <td class="pane-header number">${numberClangDiagnosticWarning}</td>
+                <td class="pane-header number">${numberEsriWarning}</td>
                 <td class="pane-header number">${numberGoogleWarning}</td>
                 <td class="pane-header number">${numberLlvmWarning}</td>
                 <td class="pane-header number">${numberMiscWarning}</td>

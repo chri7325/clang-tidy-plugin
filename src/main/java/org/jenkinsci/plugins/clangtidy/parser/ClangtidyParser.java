@@ -37,6 +37,7 @@ public class ClangtidyParser implements Serializable {
 		List<ClangtidyFile> cppcoreguidelinesWarningList = new ArrayList<ClangtidyFile>();
 		List<ClangtidyFile> clangAnalyzerWarningList = new ArrayList<ClangtidyFile>();
 		List<ClangtidyFile> clangDiagnosticWarningList = new ArrayList<ClangtidyFile>();
+		List<ClangtidyFile> esriWarningList = new ArrayList<ClangtidyFile>();
 		List<ClangtidyFile> googleWarningList = new ArrayList<ClangtidyFile>();
 		List<ClangtidyFile> llvmWarningList = new ArrayList<ClangtidyFile>();
 		List<ClangtidyFile> miscWarningList = new ArrayList<ClangtidyFile>();
@@ -82,6 +83,8 @@ public class ClangtidyParser implements Serializable {
 					clangAnalyzerWarningList.add(clangtidyFile);
 				} else if ("clang-diagnostic".equals(type)) {
 					clangDiagnosticWarningList.add(clangtidyFile);
+				} else if ("esri".equals(type)) {
+					esriWarningList.add(clangtidyFile);
 				} else if ("google".equals(type)) {
 					googleWarningList.add(clangtidyFile);
 				} else if ("llvm".equals(type)) {
@@ -129,6 +132,7 @@ public class ClangtidyParser implements Serializable {
 		clangTidyReport.setCppcoreguidelinesWarningList(cppcoreguidelinesWarningList);
 		clangTidyReport.setClangAnalyzerWarningList(clangAnalyzerWarningList);
 		clangTidyReport.setClangDiagnosticWarningList(clangDiagnosticWarningList);
+		clangTidyReport.setEsriWarningList(esriWarningList);
 		clangTidyReport.setGoogleWarningList(googleWarningList);
 		clangTidyReport.setLlvmWarningList(llvmWarningList);
 		clangTidyReport.setMiscWarningList(miscWarningList);

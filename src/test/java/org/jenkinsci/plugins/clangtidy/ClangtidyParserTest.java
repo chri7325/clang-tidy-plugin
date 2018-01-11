@@ -24,7 +24,7 @@ public class ClangtidyParserTest {
 
 	private void processClangtidy(String filename, int nbAllErrors, int nbErrorSeverity, int nbWarningSeverity,
 			int nbBoostWarning, int nbCertWarning, int nbClangAnalyzerWarning, int nbClangDiagnosticWarning,
-			int nbCppcoreguidelinesWarning, int nbGoogleWarning, int nbLlvmWarning, int nbMiscWarning,
+			int nbCppcoreguidelinesWarning, int nbEsriWarning, int nbGoogleWarning, int nbLlvmWarning, int nbMiscWarning,
 			int nbModernizeWarning, int nbMpiWarning, int nbPerformanceWarning, int nbReadabilityWarning)
 			throws Exception {
 
@@ -42,6 +42,7 @@ public class ClangtidyParserTest {
 		List<ClangtidyFile> clangAnalyzerWarningList = clangtidyReport.getClangAnalyzerWarningList();
 		List<ClangtidyFile> clangDiagnosticWarningList = clangtidyReport.getClangDiagnosticWarningList();
 		List<ClangtidyFile> cppcoreguidelinesWarningList = clangtidyReport.getCppcoreguidelinesWarningList();
+		List<ClangtidyFile> esriWarningList = clangtidyReport.getEsriWarningList();
 		List<ClangtidyFile> googleWarningList = clangtidyReport.getGoogleWarningList();
 		List<ClangtidyFile> llvmWarningList = clangtidyReport.getLlvmWarningList();
 		List<ClangtidyFile> miscWarningList = clangtidyReport.getMiscWarningList();
@@ -55,7 +56,7 @@ public class ClangtidyParserTest {
 		Assert.assertEquals("Wrong computing of list of errors according to warning classes", allErrors.size(),
 				boostWarningList.size() + certWarningList.size() + clangAnalyzerWarningList.size()
 						+ clangDiagnosticWarningList.size() + cppcoreguidelinesWarningList.size()
-						+ googleWarningList.size() + llvmWarningList.size() + miscWarningList.size()
+						+ esriWarningList.size() + googleWarningList.size() + llvmWarningList.size() + miscWarningList.size()
 						+ modernizeWarningList.size() + mpiWarningList.size() + performanceWarningList.size()
 						+ readabilityWarningList.size());
 
@@ -74,6 +75,7 @@ public class ClangtidyParserTest {
 				clangDiagnosticWarningList.size());
 		Assert.assertEquals("Wrong total number of errors for the warning 'cppcoreguidelines'",
 				nbCppcoreguidelinesWarning, cppcoreguidelinesWarningList.size());
+		Assert.assertEquals("Wrong total number of errors for the warning 'esri'", nbEsriWarning, esriWarningList.size());
 		Assert.assertEquals("Wrong total number of errors for the warning 'google'", nbGoogleWarning,
 				googleWarningList.size());
 		Assert.assertEquals("Wrong total number of errors for the warning 'llvm'", nbLlvmWarning,
@@ -96,12 +98,12 @@ public class ClangtidyParserTest {
 
 	@Test
 	public void testClangtidyCppcheckOutput() throws Exception {
-		processClangtidy("testClangtidyParser_cppcheckOutput.xml", 67, 0, 67, 0, 2, 0, 0, 2, 38, 1, 0, 14, 0, 0, 10);
+		processClangtidy("testClangtidyParser_cppcheckOutput.xml", 67, 0, 67, 0, 2, 0, 0, 0, 2, 38, 1, 0, 14, 0, 0, 10);
 	}
 
 	@Test
 	public void testClangtidyRandom() throws Exception {
-		processClangtidy("testClangtidyParser_random.xml", 16, 15, 1, 0, 0, 14, 0, 1, 0, 0, 0, 0, 1, 0, 0);
+		processClangtidy("testClangtidyParser_random.xml", 16, 15, 1, 0, 0, 14, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0);
 	}
 
 }

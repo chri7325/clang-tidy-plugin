@@ -34,6 +34,7 @@ public class ClangtidyParserResult implements FilePath.FileCallable<ClangtidyRep
 				.addAll(clangtidyReport.getCppcoreguidelinesWarningList());
 		clangtidyReportResult.getClangAnalyzerWarningList().addAll(clangtidyReport.getClangAnalyzerWarningList());
 		clangtidyReportResult.getClangDiagnosticWarningList().addAll(clangtidyReport.getClangDiagnosticWarningList());
+		clangtidyReportResult.getEsriWarningList().addAll(clangtidyReport.getEsriWarningList());
 		clangtidyReportResult.getGoogleWarningList().addAll(clangtidyReport.getGoogleWarningList());
 		clangtidyReportResult.getLlvmWarningList().addAll(clangtidyReport.getLlvmWarningList());
 		clangtidyReportResult.getMiscWarningList().addAll(clangtidyReport.getMiscWarningList());
@@ -130,6 +131,8 @@ public class ClangtidyParserResult implements FilePath.FileCallable<ClangtidyRep
 				ClangtidyLogger.log(listener, "Merged " + clangtidyReportResult.getNumberClangDiagnosticWarning()
 						+ " Clang-Diagnostic warnings");
 				ClangtidyLogger.log(listener,
+						"Merged " + clangtidyReportResult.getNumberEsriWarning() + " Esri warnings");
+				ClangtidyLogger.log(listener,
 						"Merged " + clangtidyReportResult.getNumberGoogleWarning() + " Google warnings");
 				ClangtidyLogger.log(listener,
 						"Merged " + clangtidyReportResult.getNumberLlvmWarning() + " LLVM warnings");
@@ -162,6 +165,6 @@ public class ClangtidyParserResult implements FilePath.FileCallable<ClangtidyRep
 	@Override
 	public void checkRoles(RoleChecker arg0) throws SecurityException {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

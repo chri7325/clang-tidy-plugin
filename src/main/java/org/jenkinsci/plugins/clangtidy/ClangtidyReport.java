@@ -31,6 +31,7 @@ public class ClangtidyReport implements Serializable {
 	private List<ClangtidyFile> cppcoreguidelinesWarningList = new ArrayList<ClangtidyFile>();
 	private List<ClangtidyFile> clangAnalyzerWarningList = new ArrayList<ClangtidyFile>();
 	private List<ClangtidyFile> clangDiagnosticWarningList = new ArrayList<ClangtidyFile>();
+	private List<ClangtidyFile> esriWarningList = new ArrayList<ClangtidyFile>();
 	private List<ClangtidyFile> googleWarningList = new ArrayList<ClangtidyFile>();
 	private List<ClangtidyFile> llvmWarningList = new ArrayList<ClangtidyFile>();
 	private List<ClangtidyFile> miscWarningList = new ArrayList<ClangtidyFile>();
@@ -61,6 +62,10 @@ public class ClangtidyReport implements Serializable {
 
 	public List<ClangtidyFile> getCppcoreguidelinesWarningList() {
 		return cppcoreguidelinesWarningList;
+	}
+
+	public List<ClangtidyFile> getEsriWarningList() {
+		return esriWarningList;
 	}
 
 	public List<ClangtidyFile> getErrorSeverityList() {
@@ -110,6 +115,11 @@ public class ClangtidyReport implements Serializable {
 	@Exported
 	public int getNumberCppcoreguidelinesWarning() {
 		return (cppcoreguidelinesWarningList == null) ? 0 : cppcoreguidelinesWarningList.size();
+	}
+
+	@Exported
+	public int getNumberEsriWarning() {
+		return (esriWarningList == null) ? 0 : esriWarningList.size();
 	}
 
 	@Exported
@@ -178,7 +188,7 @@ public class ClangtidyReport implements Serializable {
 	public ClangtidyStatistics getStatistics() {
 		return new ClangtidyStatistics(getNumberErrorSeverity(), getNumberWarningSeverity(), getNumberBoostWarning(),
 				getNumberCertWarning(), getNumberCppcoreguidelinesWarning(), getNumberClangAnalyzerWarning(),
-				getNumberClangDiagnosticWarning(), getNumberGoogleWarning(), getNumberLlvmWarning(),
+				getNumberClangDiagnosticWarning(), getNumberEsriWarning(), getNumberGoogleWarning(), getNumberLlvmWarning(),
 				getNumberMiscWarning(), getNumberModernizeWarning(), getNumberMpiWarning(),
 				getNumberPerformanceWarning(), getNumberReadabilityWarning(), versions);
 	}
@@ -225,6 +235,10 @@ public class ClangtidyReport implements Serializable {
 
 	public void setCppcoreguidelinesWarningList(List<ClangtidyFile> cppcoreguidelinesWarningList) {
 		this.cppcoreguidelinesWarningList = cppcoreguidelinesWarningList;
+	}
+
+	public void setEsriWarningList(List<ClangtidyFile> esriWarningList) {
+		this.esriWarningList = esriWarningList;
 	}
 
 	public void setErrorSeverityList(List<ClangtidyFile> errorSeverityList) {

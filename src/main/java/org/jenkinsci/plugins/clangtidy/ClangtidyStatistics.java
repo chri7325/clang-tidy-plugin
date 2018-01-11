@@ -41,6 +41,9 @@ public class ClangtidyStatistics implements Serializable {
 	/** Count of clang-diagnostic issues. */
 	private final int clangDiagnosticWarningCount;
 
+	/** Count of esri issues. */
+	private final int esriWarningCount;
+
 	/** Count of google issues. */
 	private final int googleWarningCount;
 
@@ -69,7 +72,7 @@ public class ClangtidyStatistics implements Serializable {
 	 * Constructor, create an empty object.
 	 */
 	public ClangtidyStatistics() {
-		this(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Collections.<String>emptySet());
+		this(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Collections.<String>emptySet());
 	}
 
 	/**
@@ -85,6 +88,8 @@ public class ClangtidyStatistics implements Serializable {
 	 *            count of cppcoreguidelines issues
 	 * @param clangAnalyzerWarningCount
 	 *            count of clang-analyzer with no category
+	 * @param esriWarningCount
+	 *            count of esri issues
 	 * @param googleWarningCount
 	 *            count of google issues
 	 * @param llvmWarningCount
@@ -104,9 +109,9 @@ public class ClangtidyStatistics implements Serializable {
 	 */
 	public ClangtidyStatistics(int errorSeverityCount, int warningSeverityCount, int boostWarningCount,
 			int certWarningCount, int cppcoreguidelinesWarningCount, int clangAnalyzerWarningCount,
-			int clangDiagnosticWarningCount, int googleWarningCount, int llvmWarningCount, int miscWarningCount,
-			int modernizeWarningCount, int mpiWarningCount, int performanceWarningCount, int readabilityWarningCount,
-			Set<String> versions) {
+			int clangDiagnosticWarningCount, int esriWarningCount, int googleWarningCount, int llvmWarningCount,
+			int miscWarningCount, int modernizeWarningCount, int mpiWarningCount, int performanceWarningCount,
+			int readabilityWarningCount, Set<String> versions) {
 		this.errorSeverityCount = errorSeverityCount;
 		this.warningSeverityCount = warningSeverityCount;
 		this.boostWarningCount = boostWarningCount;
@@ -114,6 +119,7 @@ public class ClangtidyStatistics implements Serializable {
 		this.cppcoreguidelinesWarningCount = cppcoreguidelinesWarningCount;
 		this.clangAnalyzerWarningCount = clangAnalyzerWarningCount;
 		this.clangDiagnosticWarningCount = clangDiagnosticWarningCount;
+		this.esriWarningCount = esriWarningCount;
 		this.googleWarningCount = googleWarningCount;
 		this.llvmWarningCount = llvmWarningCount;
 		this.miscWarningCount = miscWarningCount;
@@ -155,6 +161,11 @@ public class ClangtidyStatistics implements Serializable {
 	@Exported
 	public int getNumberCppcoreguidelinesWarning() {
 		return cppcoreguidelinesWarningCount;
+	}
+
+	@Exported
+	public int getNumberEsriWarning() {
+		return esriWarningCount;
 	}
 
 	@Exported

@@ -36,15 +36,13 @@ public class ClangtidyConfigGraph implements Serializable {
 	private boolean displayCppcoreguidelinesWarning = true;
 	private boolean displayClangAnalyzerWarning = true;
 	private boolean displayClangDiagnosticWarning = true;
+	private boolean displayEsriWarning = true;
 	private boolean displayGoogleWarning = true;
 	private boolean displayLlvmWarning = true;
 	private boolean displayMiscWarning = true;
 	private boolean displayModernizeWarning = true;
-
 	private boolean displayMpiWarning = true;
-
 	private boolean displayPerformanceWarning = true;
-
 	private boolean displayReadabilityWarning = true;
 
 	public ClangtidyConfigGraph() {
@@ -53,9 +51,9 @@ public class ClangtidyConfigGraph implements Serializable {
 	public ClangtidyConfigGraph(int xSize, int ySize, int numBuildsInGraph, boolean displayAllErrors,
 			boolean displayErrorSeverity, boolean displayWarningSeverity, boolean displayBoostWarning,
 			boolean displayCertWarning, boolean displayCppcoreguidelinesWarning, boolean displayClangAnalyzerWarning,
-			boolean displayClangDiagnosticWarning, boolean displayGoogleWarning, boolean displayLlvmWarning,
-			boolean displayMiscWarning, boolean displayModernizeWarning, boolean displayMpiWarning,
-			boolean displayPerformanceWarning, boolean displayReadabilityWarning) {
+			boolean displayClangDiagnosticWarning, boolean displayEsriWarning, boolean displayGoogleWarning,
+			boolean displayLlvmWarning, boolean displayMiscWarning, boolean displayModernizeWarning,
+			boolean displayMpiWarning, boolean displayPerformanceWarning, boolean displayReadabilityWarning) {
 		this.xSize = xSize;
 		this.ySize = ySize;
 		this.numBuildsInGraph = numBuildsInGraph;
@@ -67,6 +65,7 @@ public class ClangtidyConfigGraph implements Serializable {
 		this.displayCppcoreguidelinesWarning = displayCppcoreguidelinesWarning;
 		this.displayClangAnalyzerWarning = displayClangAnalyzerWarning;
 		this.displayClangDiagnosticWarning = displayClangDiagnosticWarning;
+		this.displayEsriWarning = displayEsriWarning;
 		this.displayGoogleWarning = displayGoogleWarning;
 		this.displayLlvmWarning = displayLlvmWarning;
 		this.displayMiscWarning = displayMiscWarning;
@@ -122,6 +121,10 @@ public class ClangtidyConfigGraph implements Serializable {
 
 	public boolean isDisplayErrorSeverity() {
 		return displayErrorSeverity;
+	}
+
+	public boolean isDisplayEsriWarning() {
+		return displayEsriWarning;
 	}
 
 	public boolean isDisplayGoogleWarning() {

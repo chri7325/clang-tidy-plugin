@@ -100,6 +100,11 @@ public class ClangtidyProjectAction extends AbstractClangtidyProjectAction {
 				dsb.add(statistics.getNumberClangDiagnosticWarning(), Messages.clangtidy_ClangDiagnostic(), label);
 			}
 
+			// Esri
+			if (configGraph.isDisplayEsriWarning()) {
+				dsb.add(statistics.getNumberEsriWarning(), Messages.clangtidy_Esri(), label);
+			}
+
 			// Google
 			if (configGraph.isDisplayGoogleWarning()) {
 				dsb.add(statistics.getNumberGoogleWarning(), Messages.clangtidy_Google(), label);

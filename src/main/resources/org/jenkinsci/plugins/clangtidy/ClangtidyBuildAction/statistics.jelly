@@ -52,6 +52,12 @@
             </tr>
 
             <tr>
+                <td class="pane" data="5">${%Esri}</td>
+                <td class="pane number" data="${stat.numberEsriWarning}">${stat.numberEsriWarning}</td>
+                <td class="pane number" data="${diff.numberEsriWarning}">${diff.formatDiff(diff.numberEsriWarning)}</td>
+            </tr>
+
+            <tr>
                 <td class="pane" data="9">${%Google}</td>
                 <td class="pane number" data="${stat.numberGoogleWarning}">${stat.numberGoogleWarning}</td>
                 <td class="pane number" data="${diff.numberGoogleWarning}">${diff.formatDiff(diff.numberGoogleWarning)}</td>

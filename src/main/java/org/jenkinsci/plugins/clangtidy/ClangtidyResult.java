@@ -239,6 +239,7 @@ public class ClangtidyResult implements Serializable {
 				current.getNumberCppcoreguidelinesWarning() - previous.getNumberCppcoreguidelinesWarning(),
 				current.getNumberClangAnalyzerWarning() - previous.getNumberClangAnalyzerWarning(),
 				current.getNumberClangDiagnosticWarning() - previous.getNumberClangDiagnosticWarning(),
+				current.getNumberEsriWarning() - previous.getNumberEsriWarning(),
 				current.getNumberGoogleWarning() - previous.getNumberGoogleWarning(),
 				current.getNumberLlvmWarning() - previous.getNumberLlvmWarning(),
 				current.getNumberMiscWarning() - previous.getNumberMiscWarning(),
